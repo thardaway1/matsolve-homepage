@@ -33,6 +33,11 @@ python -m http.server 8000    # then open http://localhost:8000
 | What | Where |
 |---|---|
 | News items | `NEWS` array at the top of `assets/js/site.js` — sorted newest-first automatically |
+
+**News policy (decided 2026-09-01):** paper publications do not go in the news stream —
+the full list already lives on the publications page. The exception is a paper that is
+news in its own right, such as a journal front-cover selection.
+
 | Publications | `<script id="pubdata">` in `index.html` |
 | Members, research areas, facility copy | markup in `index.html` |
 | Images | drop a file in `assets/img/`, add the key to `<script id="imgdata">` |
