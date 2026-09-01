@@ -48,10 +48,28 @@ Regenerate derivatives from the originals rather than re-compressing what is her
 
 Brand colour: `#66E6E3` (MatSOLVE symbol), `#077F7A` for light-mode text.
 
-## Before publishing
+## Open items
 
-- [ ] Member photo consent — 12 portraits and 9 group/outing photos are in the repo.
-      Once pushed to a public repo they stay in the commit history even if removed later.
-- [ ] Repository visibility — public repo + GitHub Pages (free), or private repo
-      (Pages needs a paid plan).
-- [ ] Domain — GitHub Pages subdomain vs. a KICET-hosted address.
+Content that still needs the lab's input — the draft carried these as on-page notes;
+they were removed before publishing, so they live here instead.
+
+- **Profile links** — Google Scholar, ORCID, GitHub, KICET profile and the CV file.
+  The markup is in place but `hidden`: fill the `href` and drop the `hidden`
+  attribute on the `data-ext` links in `index.html`.
+- **Lab phone number and postal address** — the contact block has email and QR only.
+- **Member names and titles** — English spellings and ranks (researcher /
+  student researcher / postdoc) were inferred from the photo filenames.
+- **Publication author lines** — no full author lists, so each entry shows
+  *position / total authors / role*. Thumbnails are placeholders for graphical
+  abstracts.
+- **Gallery captions** — event names and dates come from the photo folder names.
+- **News wording** — Korean items are lifted from press-release filenames.
+
+## Publishing
+
+Decided 2026-09-01: **public repository + GitHub Pages**, all 47 images included
+(12 member portraits, 9 group photos). Note that images pushed to a public repo
+stay in the commit history even if removed later.
+
+Deploy: push to GitHub → Settings → Pages → *Deploy from a branch* → `main` / `/ (root)`.
+`.nojekyll` is present so the files are served as-is.
