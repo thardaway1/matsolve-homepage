@@ -252,20 +252,6 @@ figcaption{font-size:.82rem;color:var(--muted);margin-top:9px;line-height:1.5}
 .tag[data-k="d"]{border-style:dashed}
 
 /* ---------- facility ---------- */
-table.spec{width:100%;border-collapse:collapse;margin:20px 0 6px;font-size:.88rem}
-table.spec caption{
-  text-align:left;font-family:"JetBrains Mono",monospace;font-size:.7rem;
-  letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-bottom:7px;
-}
-table.spec th,table.spec td{
-  text-align:left;padding:9px 12px 9px 0;border-top:1px solid var(--rule);vertical-align:top;
-}
-table.spec th{font-weight:500;color:var(--head);width:38%}
-table.spec td{color:var(--muted)}
-table.spec td:last-child{
-  width:7em;text-align:right;padding-right:0;
-  font-family:"JetBrains Mono",monospace;font-size:.8rem;
-}
 h3.sub{
   font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.09em;
   text-transform:uppercase;color:var(--muted);margin:26px 0 10px;
@@ -350,11 +336,18 @@ ul.plain b{color:var(--head);font-weight:500}
   font-family:"JetBrains Mono",monospace;font-size:.8rem;color:var(--accent);
   padding-top:4px;font-variant-numeric:tabular-nums;
 }
-.entry{display:grid;grid-template-columns:86px 1fr;gap:15px;padding:11px 0}
+.entry{display:grid;grid-template-columns:132px 1fr;gap:16px;padding:13px 0}
 .thumb{border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:var(--surface)}
 .thumb svg{display:block;width:100%;height:auto}
+.thumb img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center top;background:#fff}
 .entry-title{font-size:.95rem;line-height:1.45;color:var(--head);font-weight:500}
 .entry-authors{font-size:.83rem;color:var(--muted);margin-top:3px}
+.entry-authors sup{font-size:.72em;color:var(--accent);padding-left:.5px}
+.legend{
+  font-size:.78rem;color:var(--muted);margin:-4px 0 14px;
+}
+.legend .me{color:var(--accent);font-weight:500}
+.legend sup{color:var(--accent)}
 .entry-authors .me{color:var(--accent);font-weight:500}
 .entry-venue{font-size:.84rem;color:var(--ink);margin-top:2px}
 .pills{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}

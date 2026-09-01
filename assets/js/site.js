@@ -93,16 +93,17 @@
     n+' peer-reviewed papers, '+span+'. '+lead+' with the PI as first or corresponding author · mean JIF '+avgIF+' · highest '+maxIF+'.';
   var MONTH = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
+  /* Full author line: lab members stand out, † co-first, * corresponding. */
+  function authorLine(p){
+    if(!p.authors) return '<span class="me">H. Ko</span> and co-authors';
+    return p.authors.map(function(a){
+      var marks = a.m ? '<sup>'+a.m+'</sup>' : '';
+      return a.lab ? '<span class="me">'+a.n+marks+'</span>' : a.n+marks;
+    }).join(', ');
+  }
+
   function entryHTML(p){
-    var authors;
-    if(p.pos){
-      var before = p.pos[0]-1, after = p.pos[1]-p.pos[0];
-      authors = (before ? before+' author'+(before>1?'s':'')+', ' : '')
-        + '<span class="me">H. Ko</span>'
-        + (after ? ', '+after+' more' : '');
-    } else {
-      authors = '<span class="me">H. Ko</span> and co-authors';
-    }
+    var authors = authorLine(p);
     var pills = '<button class="pill" type="button" data-toggle="d'+p.id+'">details</button>';
     if(p.doi) pills += '<a class="pill" href="'+p.doi+'" target="_blank" rel="noopener">DOI</a>';
     pills += '<span class="pill flat">'+ROLE[p.role]+'</span>';
@@ -115,7 +116,7 @@
       + ' · <b>Published</b> ' + p.date;
 
     return '<div class="entry">'
-      + '<div class="thumb">'+thumb(p.id)+'</div>'
+      + '<div class="thumb">'+(p.fig ? '<img src="assets/img/pub/'+p.id+'.jpg" alt="" loading="lazy">' : thumb(p.id))+'</div>'
       + '<div>'
       +   '<div class="entry-title">'+p.title+'</div>'
       +   '<div class="entry-authors">'+authors+'</div>'
