@@ -14,7 +14,7 @@
     {d:'2026-07-01', label:'2026.07', ko:true, img:'n_grad',
      t:'졸업생 송혜정, NUS MSE 박사과정 진학 및 대한민국 정부 국비유학생 선정'},
     {d:'2026-06-16', u:'https://doi.org/10.1039/d5na00962f', img:'n_cover', t:'<i>Nanoscale Advances</i> front-cover selection — MXene vacancy chemistry'},
-    {d:'2026-03-30', ko:true, img:'n_plat', t:'가상공학 플랫폼 구축 사업 성과 보도'},
+    {d:'2026-03-30', u:'https://www.etnews.com/20260330000172', ko:true, img:'n_plat', t:'가상공학 플랫폼 구축 사업 성과 보도'},
     {d:'2026-02-09', u:'https://www.hankyung.com/article/202602093067h', ko:true, t:'작가와 협업, 해양부산물이 예술로 재탄생', s:'한국세라믹기술원 보도자료'},
     {d:'2025-10-17', ko:true, img:'n_award', t:'한국세라믹학회 추계학술대회 우수포스터상 수상'},
     {d:'2025-03-26', u:'https://www.electimes.com/news/articleView.html?idxno=352452', ko:true, img:'n_geo', t:"'AI가 설계한 시멘트 대체재' 친환경 지오폴리머 개발"},
