@@ -128,25 +128,20 @@
 
   function render(filter){
     var list = PUBS.slice(), html = '';
+    if(filter==='sel')  list = list.filter(function(p){return p.sel;});
     if(filter==='lead') list = list.filter(function(p){return p.role!=='co-author';});
     if(filter==='q1')   list = list.filter(function(p){return p.q==='Q1';});
 
-    if(filter==='cited'){
-      list.sort(function(a,b){return b.cites-a.cites;});
-      html = '<div class="year-row"><div class="year-tag">top</div><div>'
-           + list.slice(0,12).map(entryHTML).join('') + '</div></div>';
-    } else {
-      var lastYear = null;
-      list.forEach(function(p){
-        if(p.year !== lastYear){
-          if(lastYear !== null) html += '</div></div>';
-          html += '<div class="year-row"><div class="year-tag">'+p.year+'</div><div>';
-          lastYear = p.year;
-        }
-        html += entryHTML(p);
-      });
-      if(lastYear !== null) html += '</div></div>';
-    }
+    var lastYear = null;
+    list.forEach(function(p){
+      if(p.year !== lastYear){
+        if(lastYear !== null) html += '</div></div>';
+        html += '<div class="year-row"><div class="year-tag">'+p.year+'</div><div>';
+        lastYear = p.year;
+      }
+      html += entryHTML(p);
+    });
+    if(lastYear !== null) html += '</div></div>';
     document.getElementById('pubList').innerHTML = html;
   }
   render('all');
