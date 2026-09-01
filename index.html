@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="MatSOLVE — Material Simulation and Optimization Lab with Virtual Engineering, Korea Institute of Ceramic Engineering and Technology.">
+<title>MatSOLVE al-folio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#" data-go="about"><img data-img="logo" alt="MatSOLVE"><b>MatSOLVE</b></a>
+    <div class="nav-links">
+      <button type="button" data-go="about" aria-current="page">about</button>
+      <button type="button" data-go="research">research</button>
+      <button type="button" data-go="people">people</button>
+      <button type="button" data-go="publications">publications</button>
+      <button type="button" data-go="facility">facility</button>
+      <button type="button" data-go="gallery">gallery</button>
+      <button type="button" id="modeBtn" aria-label="Toggle colour theme">☾</button>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- ================= ABOUT ================= -->
+<section class="page" id="page-about">
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Korea Institute of Ceramic Engineering &amp; Technology</p>
+      <h1 class="title">MatSOLVE</h1>
+      <p class="tagline"><em>Mat</em>erial <em>S</em>imulation and <em>O</em>ptimization <em>L</em>ab with <em>V</em>irtual <em>E</em>ngineering</p>
+      <p class="lede ko" lang="ko">물리 기반과 데이터 기반의 가상공학 기법으로 소재·공정 문제를 해석하고 설계합니다.</p>
+      <p class="affil">가상공학플랫폼센터 · 한국세라믹기술원 진주 본원</p>
+      <div class="social">
+        <a href="mailto:hko@kicet.re.kr">EMAIL</a>
+        <a href="#" data-ext>SCHOLAR</a>
+        <a href="#" data-ext>ORCID</a>
+        <a href="#" data-ext>GITHUB</a>
+        <a href="#" data-ext>KICET</a>
+      </div>
+    </div>
+    <img class="hero-mark" data-img="logo" alt="MatSOLVE 심볼">
+  </div>
+
+  <div class="block">
+    <h2 class="sec">two drivers, one answer</h2>
+    <div class="drivers">
+      <div class="driver">
+        <span class="k">Physics-driven</span>
+        <h3>Multi-scale &amp; multi-physics modeling</h3>
+        <p>Physics-based solutions, system dynamics and mechanisms, across a range of computational techniques — the route to <b>understanding mechanisms</b>.</p>
+      </div>
+      <div class="driver">
+        <span class="k">Data-driven</span>
+        <h3>Big-data based artificial intelligence</h3>
+        <p>Data-based solutions, prediction and optimization, searching a massive parametric space — the route to <b>empowering predictability</b>.</p>
+      </div>
+    </div>
+    <div class="arrowto">Predict, resolve and optimize material <b>issues</b> — and accelerate material discovery.</div>
+    <figure style="margin-top:20px">
+      <div class="plate"><img data-img="concept" alt="MatSOLVE 연구 개념도: Model-Driven과 Data-Driven 두 축"></div>
+      <figcaption>The lab in one diagram: model-driven analysis on top, data-driven prediction below, both feeding the same decision.</figcaption>
+    </figure>
+  </div>
+
+  <hr class="rule">
+
+  <div class="block" style="margin-top:0">
+    <h2 class="sec">news</h2>
+    <div class="rows news-list" id="newsList"></div>
+  </div>
+
+  <hr class="rule">
+
+  <div class="block" style="margin-top:0">
+    <h2 class="sec">at a glance</h2>
+    <div class="cards" id="glance"></div>
+  </div>
+
+  <p class="note ko" lang="ko"><b>시안 메모 —</b> Scholar·ORCID·GitHub 주소, 연구실 대표 전화·주소는 아직 비어 있습니다. 뉴스 문구는 보도자료 파일명을 그대로 옮긴 초안입니다.</p>
+</section>
+
+<!-- ================= RESEARCH ================= -->
+<section class="page" id="page-research" hidden>
+  <p class="eyebrow">Research</p>
+  <h1 class="title">From electrons to reactors</h1>
+  <p class="lede">One question runs through every project: what actually decides the property — and can we compute it before anyone fires a furnace?</p>
+
+  <div class="block">
+    <h2 class="sec">the scale ladder</h2>
+    <p style="color:var(--muted);font-size:.95rem;max-width:64ch">Each rung answers what the one below it cannot resolve, and hands its result upward. The lab runs all four.</p>
+    <div class="ladder">
+      <div class="rung"><div class="hex"></div><div class="sc">Electronic / atomic</div><h4>Atomistic simulation</h4><div class="codes">VASP<br>Materials Studio</div></div>
+      <div class="rung"><div class="hex"></div><div class="sc">Micro</div><h4>Molecular dynamics</h4><div class="codes">LAMMPS</div></div>
+      <div class="rung"><div class="hex"></div><div class="sc">Meso / particle</div><h4>Mesoscale modeling</h4><div class="codes">GeoDict<br>Rocky</div></div>
+      <div class="rung"><div class="hex"></div><div class="sc">Macro / continuum</div><h4>Continuum mechanics</h4><div class="codes">Ansys<br>COMSOL</div></div>
+    </div>
+    <figure style="margin-top:20px">
+      <div class="plate"><img data-img="scope" alt="원자 스케일부터 연속체까지 이어지는 멀티스케일 시뮬레이션 체계"></div>
+      <figcaption>The same problem, four resolutions — and the solver stack that carries information between them.</figcaption>
+    </figure>
+  </div>
+
+  <div class="block">
+    <h2 class="sec">five areas</h2>
+
+    <div class="area">
+      <div class="area-head"><span class="area-num">01</span><h3>Energy &amp; functional materials</h3></div>
+      <p>Catalysts for energy conversion and optoelectronic materials, treated with the same tool: first-principles calculation of the site that decides the behaviour. CO<sub>2</sub> adsorption on LSCM, CeO<sub>2</sub> crystallography, H<sup>+</sup> evolution under an interface dipole — and, on the optoelectronic side, a six-step design pipeline that runs data mining through to thermodynamic stability.</p>
+      <div class="keys"><span class="key">DFT</span><span class="key">CO2 reduction</span><span class="key">water splitting</span><span class="key">β-Ga2O3</span><span class="key">doping</span></div>
+      <div class="plate"><img data-img="r1" alt="Energy and Functional Materials 연구 개요"></div>
+    </div>
+
+    <div class="area">
+      <div class="area-head"><span class="area-num">02</span><h3>Kinetics in solids and devices</h3></div>
+      <p>Charge dynamics in quantum-dot devices and ionic diffusion in amorphous solids — two problems where the rate, not the ground state, is what matters. Atomistic impact-ionization results are carried into device simulation; amorphous structures are re-cast as graphs so a neural network can predict how diffusion changes as the structure does.</p>
+      <div class="keys"><span class="key">CQD IRPD</span><span class="key">impact ionization</span><span class="key">graph neural network</span><span class="key">Li diffusion</span></div>
+      <div class="plate"><img data-img="r2" alt="Kinetics in Solids and Devices 연구 개요"></div>
+    </div>
+
+    <div class="area">
+      <div class="area-head"><span class="area-num">03</span><h3>Materials data &amp; ML-driven design</h3></div>
+      <p>Experiments give roughly a hundred data points; simulation gives two hundred thousand. Hybridising the two is the lab's signature move — demonstrated on ceramic tape casting, then extended to novel-structure discovery, single-atom catalysts, and multimodal models that read SEM images and material tables together.</p>
+      <div class="keys"><span class="key">hybrid data</span><span class="key">MEGNet · CGCNN</span><span class="key">SevenNet</span><span class="key">machine vision</span><span class="key">SOFC</span></div>
+      <div class="plate"><img data-img="r3" alt="Materials Data and Machine Learning-Driven Design 연구 개요"></div>
+    </div>
+
+    <div class="area">
+      <div class="area-head"><span class="area-num">04</span><h3>Geopolymer and composite</h3></div>
+      <p>Geopolymers are still mixed by trial. Design of experiments plus metamodel-guided optimisation turns the mix ratio into a solvable multi-objective problem, and the resulting alkali-based matrix carries through to all-ceramic composites — hand lay-up, autoclave, then tensile, shear and compressive testing.</p>
+      <div class="keys"><span class="key">design of experiments</span><span class="key">kriging</span><span class="key">PIAnO</span><span class="key">all-ceramic CMC</span><span class="key">TGA</span></div>
+      <div class="plate"><img data-img="r4" alt="Geopolymer and Composite 연구 개요"></div>
+    </div>
+
+    <div class="area">
+      <div class="area-head"><span class="area-num">05</span><h3>Modeling of fabrication processes</h3></div>
+      <p>Wide-bandgap semiconductor deposition reactors — HVPE and MOCVD — modelled for concentration, velocity and heating fields, so uniformity is a design variable rather than a discovered outcome. The same fluid-and-heat machinery is turned on engineering systems: component temperature, case flow, time-dependent behaviour, variable optimisation.</p>
+      <div class="keys"><span class="key">HVPE</span><span class="key">MOCVD</span><span class="key">GaN</span><span class="key">CFD</span><span class="key">thermal design</span></div>
+      <div class="plate"><img data-img="r5" alt="Modeling of Fabrication Processes 연구 개요"></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="sec">threads, traced through the papers</h2>
+    <p style="color:var(--muted);font-size:.95rem;max-width:64ch">The five areas above are how the lab is organised. These are the arguments the publication record actually makes.</p>
+    <div class="rows" style="margin-top:14px">
+      <div class="row"><div class="d">dielectrics</div><div class="t"><b>Predicted before they are made.</b> BaTiO<sub>3</sub>-based dielectrics are governed by composition and processing at once, and the two are usually studied apart. Multi-modal models take both as input and stay interpretable — the model has to say which descriptor moved the permittivity, not just how much.<small>J. Materiomics 2026 · Materials &amp; Design 2026 · Mater. Today Commun. 2026 · J. Asian Ceram. Soc. 2025</small></div></div>
+      <div class="row"><div class="d">defects</div><div class="t"><b>Wide-bandgap oxides.</b> Doped β-Ga<sub>2</sub>O<sub>3</sub>, ZnO sheets and rutile TiO<sub>2</sub> all fail or succeed at the same place: a defect site whose electronic structure resists direct measurement. First-principles calculations resolve those sites and connect them to opto-electronic and sensing behaviour.<small>Physica B 2025 · RSC Advances 2025 · Surfaces and Interfaces 2026</small></div></div>
+      <div class="row"><div class="d">tribo</div><div class="t"><b>Why triboelectricity is irreproducible.</b> Contact electrification is treated as a material constant, yet measured values scatter across laboratories. Modelling homolytic bond rupture at the sliding interface shows the scatter is intrinsic — it comes from the mechanochemistry, not from sloppy experiments.<small>Phys. Rev. Lett. 2023 · Small Methods 2026 · Nanoenergy Adv. 2025 · Adv. Electron. Mater. 2023</small></div></div>
+      <div class="row"><div class="d">catalysis</div><div class="t"><b>Surfaces under operating conditions.</b> Atomic-scale simulation of catalysis usually assumes a fixed Fermi level and a pristine surface. Neither holds in a running cell. The lab works on models that let the electronic boundary condition move with the experiment.<small>J. Mater. Chem. A 2024 · Chem. Eng. J. 2025 · Mater. Today Energy 2026 · Nano-Micro Lett. 2026</small></div></div>
+      <div class="row"><div class="d">composites</div><div class="t"><b>Curing, crystallisation, damage.</b> Geopolymers and oxide/oxide ceramic matrix composites are still designed largely by trial. Metamodel-guided optimisation and molecular dynamics give the search a direction — including for composites that must survive very low Earth orbit.<small>Digital Discovery 2025 · Adv. Compos. Hybrid Mater. 2026 · Composites Research 2025 · Adv. Compos. Mater. 2026</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PEOPLE ================= -->
+<section class="page" id="page-people" hidden>
+  <p class="eyebrow">People</p>
+  <h1 class="title">Who runs the solvers</h1>
+  <p class="lede">A computational group of a dozen, split between physics-driven modelling and data-driven design.</p>
+
+  <div class="block">
+    <h2 class="sec">principal investigator</h2>
+    <div class="pi">
+      <img data-img="pi" alt="고현석 박사">
+      <div>
+        <h3>Hyunseok Ko <span style="font-weight:400;color:var(--muted);font-size:1rem" class="ko" lang="ko">고현석</span></h3>
+        <div class="role">Principal Investigator · Senior Researcher</div>
+        <p>Builds atomistic and data-driven models that explain why functional ceramics behave the way they do — and uses them to decide what to make next.</p>
+        <p>On the physics side, density functional theory resolves mechanisms that experiment alone cannot separate: vacancy-driven surface reactions, charge transfer at contact interfaces, dopant states in wide-bandgap oxides. On the data side, models map composition and processing onto measured properties, so a formulation decision can be made before the furnace is switched on.</p>
+        <p>The two halves are meant to be used together. Simulation datasets are large but idealised; experimental datasets are small but real. Much of the lab's recent work fuses them — hybridising a handful of measured samples with thousands of computed ones, and keeping the result interpretable enough that a materials scientist can argue with it.</p>
+        <p>Currently leading computational work on dielectric ceramics, energy-conversion surfaces, and inorganic composites. Organising committee, 9th Asian Materials Data Symposium (2026).</p>
+        <div class="social">
+          <a href="mailto:hko@kicet.re.kr">EMAIL</a>
+          <a href="#" data-ext>SCHOLAR</a>
+          <a href="#" data-ext>ORCID</a>
+          <a href="#" data-ext>CV</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="sec">postdoctoral researchers</h2>
+    <div class="people">
+      <div class="person"><img data-img="m_ganji" alt="Ganji"><div class="n">Ganji</div><div class="r">Postdoctoral Researcher</div></div>
+      <div class="person"><img data-img="m_prabha" alt="Prabhakaran Sampath"><div class="n">Prabhakaran Sampath</div><div class="r">Postdoctoral Researcher</div></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="sec">researchers</h2>
+    <div class="people">
+      <div class="person"><img data-img="m_bincy" alt="Bincy Babu Raj"><div class="n">Bincy Babu Raj</div><div class="r">Researcher</div></div>
+      <div class="person"><img data-img="m_ksw" alt="강신우"><div class="n">Shinwoo Kang <span class="ko" lang="ko">강신우</span></div><div class="r">Researcher</div></div>
+      <div class="person"><img data-img="m_kjb" alt="공주배"><div class="n">Jubae Kong <span class="ko" lang="ko">공주배</span></div><div class="r">Researcher</div></div>
+      <div class="person"><img data-img="m_khn" alt="김하늘"><div class="n">Haneul Kim <span class="ko" lang="ko">김하늘</span></div><div class="r">Researcher</div></div>
+      <div class="person"><img data-img="m_smt" alt="서민택"><div class="n">Mintaek Seo <span class="ko" lang="ko">서민택</span></div><div class="r">Researcher</div></div>
+      <div class="person"><img data-img="m_ldg" alt="이동건"><div class="n">Donggeon Lee <span class="ko" lang="ko">이동건</span></div><div class="r">Researcher</div></div>
+      <div class="person"><img data-img="m_lsh" alt="이상훈"><div class="n">Sanghoon Lee <span class="ko" lang="ko">이상훈</span></div><div class="r">Researcher</div></div>
+      <div class="person"><img data-img="m_jsw" alt="정승원"><div class="n">Seungwon Jeong <span class="ko" lang="ko">정승원</span></div><div class="r">Researcher</div></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="sec">alumni</h2>
+    <div class="people">
+      <div class="person"><img data-img="m_shj" alt="송혜정"><div class="n">Hyejeong Song <span class="ko" lang="ko">송혜정</span></div><div class="r">→ Ph.D., NUS MSE (2026)<br>National scholarship for study abroad</div></div>
+    </div>
+  </div>
+
+  <p class="note ko" lang="ko"><b>시안 메모 —</b> 영문 이름 표기와 직급(연구원/학생연구원/박사후연구원)은 확인이 필요합니다. 파일명 기준으로 배치했습니다.</p>
+</section>
+
+<!-- ================= PUBLICATIONS ================= -->
+<section class="page" id="page-publications" hidden>
+  <p class="eyebrow">Publications</p>
+  <h1 class="title">Peer-reviewed work</h1>
+  <p class="lede" id="pubSub"></p>
+  <div class="filters" id="filters">
+    <button type="button" data-f="all" aria-pressed="true">all</button>
+    <button type="button" data-f="lead" aria-pressed="false">first / corresponding</button>
+    <button type="button" data-f="q1" aria-pressed="false">Q1 only</button>
+    <button type="button" data-f="cited" aria-pressed="false">most cited</button>
+  </div>
+  <div id="pubList"></div>
+  <p class="note ko" lang="ko"><b>시안 메모 —</b> 저자 전체 명단이 없어 저자 줄에는 <em>순번 / 총 인원 / 역할</em>만 표시했습니다. 썸네일은 그래픽 초록 자리입니다.</p>
+</section>
+
+<!-- ================= FACILITY ================= -->
+<section class="page" id="page-facility" hidden>
+  <p class="eyebrow">Facility</p>
+  <h1 class="title">Compute and codes</h1>
+  <p class="lede">A dedicated cluster and a commercial solver stack that covers every rung of the scale ladder.</p>
+
+  <div class="block">
+    <h2 class="sec">ceramic materials AI big-data solution</h2>
+    <figure>
+      <div class="plate"><img data-img="cluster" alt="세라믹 소재 AI 빅데이터 솔루션 클러스터"></div>
+      <figcaption>In-house HPC cluster built under the Ministry of Trade, Industry and Energy virtual-engineering platform programme (KIAT). Intel Xeon Gold 6526Y nodes.</figcaption>
+    </figure>
+  </div>
+
+  <div class="block">
+    <h2 class="sec">solver stack</h2>
+    <div class="sw">
+      <div><div class="swcell"><img data-img="sw_vasp" alt="VASP"></div><div class="swname">VASP</div></div>
+      <div><div class="swcell"><img data-img="sw_msstudio" alt="Materials Studio"></div><div class="swname">Materials Studio</div></div>
+      <div><div class="swcell"><img data-img="sw_geodict" alt="GeoDict"></div><div class="swname">GeoDict</div></div>
+      <div><div class="swcell"><img data-img="sw_digimat" alt="Digimat"></div><div class="swname">Digimat</div></div>
+      <div><div class="swcell"><img data-img="sw_ansys" alt="ANSYS"></div><div class="swname">ANSYS</div></div>
+      <div><div class="swcell"><img data-img="sw_fluent" alt="ANSYS Fluent"></div><div class="swname">ANSYS Fluent</div></div>
+      <div><div class="swcell"><img data-img="sw_comsol" alt="COMSOL Multiphysics"></div><div class="swname">COMSOL</div></div>
+      <div><div class="swcell"><img data-img="sw_piano" alt="PIAnO"></div><div class="swname">PIAnO</div></div>
+      <div><div class="swcell"><img data-img="sw_hepigans" alt="HEpiGaNs"></div><div class="swname">HEpiGaNs</div></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="sec">the case for virtual engineering</h2>
+    <figure>
+      <div class="plate"><img data-img="pillars" alt="MatSOLVE 연구실 소개: Physics-Driven과 Data-Driven"></div>
+      <figcaption>The lab's own summary slide — the two drivers, and what each one buys.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="page" id="page-gallery" hidden>
+  <p class="eyebrow">Gallery</p>
+  <h1 class="title">Off the cluster</h1>
+  <p class="lede">Conferences, group meetings, and the occasional birthday cake — 2026 back to 2023.</p>
+
+  <div class="block">
+    <div class="gal">
+      <figure><img data-img="g9" alt="스승의날 2026"><figcaption><b class="ko" lang="ko">스승의 날</b>2026.05.15</figcaption></figure>
+      <figure><img data-img="g8" alt="MatSOLVE 단체회식"><figcaption><b class="ko" lang="ko">MatSOLVE 단체회식</b>2026.05.08</figcaption></figure>
+      <figure><img data-img="g7" alt="KJ-Ceramics 39"><figcaption><b>39th Korea–Japan Seminar on Ceramics</b>2025.11 · Oita</figcaption></figure>
+      <figure><img data-img="g5" alt="스승의날"><figcaption><b class="ko" lang="ko">스승의 날</b>2025.05</figcaption></figure>
+      <figure><img data-img="g6" alt="스승의날 단체사진"><figcaption><b class="ko" lang="ko">스승의 날 단체사진</b>2025.05</figcaption></figure>
+      <figure><img data-img="g4" alt="Nature Conference"><figcaption><b>Nature Conference: Materials for AI</b>2025.02 · KAIST</figcaption></figure>
+      <figure><img data-img="g3" alt="한국세라믹학회 추계학술대회"><figcaption><b class="ko" lang="ko">한국세라믹학회 추계학술대회</b>2024.10</figcaption></figure>
+      <figure><img data-img="g2" alt="거제도 MT"><figcaption><b class="ko" lang="ko">거제도 MT</b>2024.03</figcaption></figure>
+      <figure><img data-img="g1" alt="창원 MT"><figcaption><b class="ko" lang="ko">창원 MT</b>2023.05</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="sec">find us</h2>
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+      <div class="plate" style="width:128px;flex:none;padding:8px"><img data-img="qr" alt="MatSOLVE QR 코드"></div>
+      <div style="font-size:.92rem;color:var(--muted);max-width:44ch">
+        <p style="margin:0">MatSOLVE · 가상공학플랫폼센터<br>한국세라믹기술원 (KICET)<br><a href="mailto:hko@kicet.re.kr">hko@kicet.re.kr</a></p>
+      </div>
+    </div>
+  </div>
+
+  <p class="note ko" lang="ko"><b>시안 메모 —</b> 사진 캡션의 행사명·날짜는 폴더명 기준입니다. 인물 사진 공개 범위는 공개 전 확인이 필요합니다.</p>
+</section>
+
+</div>
+
+<footer class="foot">
+  <img data-img="logo" alt="">
+  © 2026 MatSOLVE, Korea Institute of Ceramic Engineering &amp; Technology<br>
+  <span style="font-size:.78rem">al-folio layout · design draft</span>
+</footer>
+
+<script id="imgdata" type="application/json">{"logo": "assets/img/logo.png", "concept": "assets/img/concept.jpg", "scope": "assets/img/scope.jpg", "pillars": "assets/img/pillars.jpg", "cluster": "assets/img/cluster.jpg", "qr": "assets/img/qr.jpg", "r1": "assets/img/r1.jpg", "r2": "assets/img/r2.jpg", "r3": "assets/img/r3.jpg", "r4": "assets/img/r4.jpg", "r5": "assets/img/r5.jpg", "pi": "assets/img/pi.jpg", "m_bincy": "assets/img/m_bincy.jpg", "m_ganji": "assets/img/m_ganji.jpg", "m_prabha": "assets/img/m_prabha.jpg", "m_ksw": "assets/img/m_ksw.jpg", "m_kjb": "assets/img/m_kjb.jpg", "m_khn": "assets/img/m_khn.jpg", "m_smt": "assets/img/m_smt.jpg", "m_shj": "assets/img/m_shj.jpg", "m_ldg": "assets/img/m_ldg.jpg", "m_lsh": "assets/img/m_lsh.jpg", "m_jsw": "assets/img/m_jsw.jpg", "sw_ansys": "assets/img/sw_ansys.png", "sw_fluent": "assets/img/sw_fluent.png", "sw_comsol": "assets/img/sw_comsol.png", "sw_digimat": "assets/img/sw_digimat.png", "sw_geodict": "assets/img/sw_geodict.png", "sw_hepigans": "assets/img/sw_hepigans.png", "sw_msstudio": "assets/img/sw_msstudio.png", "sw_piano": "assets/img/sw_piano.png", "sw_vasp": "assets/img/sw_vasp.png", "n_grad": "assets/img/n_grad.jpg", "n_cover": "assets/img/n_cover.jpg", "n_plat": "assets/img/n_plat.jpg", "n_award": "assets/img/n_award.jpg", "n_geo": "assets/img/n_geo.jpg", "n_qd": "assets/img/n_qd.jpg", "g1": "assets/img/g1.jpg", "g2": "assets/img/g2.jpg", "g3": "assets/img/g3.jpg", "g4": "assets/img/g4.jpg", "g5": "assets/img/g5.jpg", "g6": "assets/img/g6.jpg", "g7": "assets/img/g7.jpg", "g8": "assets/img/g8.jpg", "g9": "assets/img/g9.jpg"}</script>
+<script id="pubdata" type="application/json">[{"id": 61, "date": "2026-08-25", "year": 2026, "title": "Effect of fumed silica content on the microstructural evolution and mechanical properties of metakaolin-based basalt fiber-reinforced geopolymer matrix composites", "venue": "Advanced Composite Materials", "jif": null, "q": null, "cites": 0, "role": "co-author", "pos": [5, 5], "doi": "https://doi.org/10.1080/09243046.2026.2721819"}, {"id": 60, "date": "2026-07-13", "year": 2026, "title": "Composition and Processing Descriptors Govern Electroceramic Property Prediction: A Multi-Modal Interpretable Framework for BaTiO3-Based Ceramics", "venue": "Journal of Materiomics", "jif": 10.6, "q": "Q1", "cites": 0, "role": "co-corresponding", "pos": [6, 7], "doi": "https://doi.org/10.1016/j.jmat.2026.101282"}, {"id": 59, "date": "2026-06-16", "year": 2026, "title": "Multi-model machine learning framework for predicting material properties of BaTiO3-based ferroelectric ceramics", "venue": "Materials & Design", "jif": 8.2, "q": "Q1", "cites": 0, "role": "co-corresponding", "pos": [6, 7], "doi": "https://doi.org/10.1016/j.matdes.2026.116418"}, {"id": 58, "date": "2026-06-03", "year": 2026, "title": "Reinforced surface reactivity via incorporation of metal catalyst onto perovskite oxide for CO2 reduction", "venue": "Materials Today Energy", "jif": 8.1, "q": "Q1", "cites": 0, "role": "co-corresponding", "pos": [9, 10], "doi": "https://doi.org/10.1016/j.mtener.2026.102327"}, {"id": 57, "date": "2026-06-01", "year": 2026, "title": "High Polarity Doping of CoFe Layered Hydroxides: Bifunctional and Corrosion-Resistant Anion Exchange Membrane Seawater Electrolyzers", "venue": "Nano-Micro Letters", "jif": 38.5, "q": "Q1", "cites": 2, "role": "co-author", "pos": [6, 11], "doi": "https://doi.org/10.1007/s40820-026-02230-8"}, {"id": 56, "date": "2026-05-01", "year": 2026, "title": "Low temperature/low-pressure fabrication of oxide/oxide ceramic matrix composites with excellent mechanical properties and stealth capabilities", "venue": "Advanced Composites and Hybrid Materials", "jif": 15.5, "q": "Q1", "cites": 0, "role": "co-author", "pos": [3, 7], "doi": "https://doi.org/10.1007/s42114-026-01816-5"}, {"id": 55, "date": "2026-04-06", "year": 2026, "title": "Mechanistic insights into vacancy-driven activation and dissociation of hydrogen peroxide on Ti3C2O2 MXene in water", "venue": "Nanoscale Advances", "jif": 6.3, "q": "Q2", "cites": 0, "role": "corresponding", "pos": [2, 2], "doi": "https://doi.org/10.1039/d5na00962f"}, {"id": 54, "date": "2026-04-06", "year": 2026, "title": "Bridging the theoretical gap between electronic structure and dynamic stability: An integrated computational framework for ZnO sheet-based chemical warfare agent sensors", "venue": "Surfaces and Interfaces", "jif": 6.0, "q": "Q2", "cites": 5, "role": "co-corresponding", "pos": [3, 3], "doi": "https://doi.org/10.1016/j.surfin.2026.109196"}, {"id": 53, "date": "2026-03-31", "year": 2026, "title": "Numerical analysis and optimization of horizontal MOCVD reactor design parameters for uniform GaN thin films", "venue": "Journal of the Korean Ceramic Society", "jif": 4.4, "q": "Q1", "cites": 0, "role": "co-corresponding", "pos": [3, 3], "doi": "https://doi.org/10.1007/s43207-026-00602-9"}, {"id": 52, "date": "2026-03-24", "year": 2026, "title": "Processing-structure-property prediction in polycrystalline BaTiO3 ceramics using experimental and computational data fusion", "venue": "Materials Today Communications", "jif": 4.9, "q": "Q2", "cites": 1, "role": "co-author", "pos": [6, 7], "doi": "https://doi.org/10.1016/j.mtcomm.2026.115004"}, {"id": 51, "date": "2026-02-24", "year": 2026, "title": "Hierarchically structured Cu-Fe-S nanomaterials as dual-functional catalysts for enhanced hydrogen evolution and photocatalytic dye degradation", "venue": "Journal of Alloys and Compounds", "jif": 6.7, "q": "Q2", "cites": 0, "role": "co-corresponding", "pos": [7, 8], "doi": "https://doi.org/10.1016/j.jallcom.2026.187031"}, {"id": 50, "date": "2026-02-01", "year": 2026, "title": "First-Principles Models of Triboelectrification", "venue": "Small Methods", "jif": 8.7, "q": "Q1", "cites": 0, "role": "co-author", "pos": [3, 6], "doi": "https://doi.org/10.1002/smtd.202501782"}, {"id": 49, "date": "2025-12-11", "year": 2025, "title": "Toward efficient dielectric material discovery: a comparative evaluation of Transformer and AutoML-based inverse learning", "venue": "Journal of Asian Ceramic Societies", "jif": 1.8, "q": "Q3", "cites": 1, "role": "co-author", "pos": [5, 6], "doi": "https://doi.org/10.1080/21870764.2025.2570561"}, {"id": 48, "date": "2025-11-15", "year": 2025, "title": "Boosting the efficiency and stability of cerium-doped trimetallic phosphides for overall water splitting", "venue": "Chemical Engineering Journal", "jif": 12.5, "q": "Q1", "cites": 5, "role": "co-author", "pos": [5, 8], "doi": "https://doi.org/10.1016/j.cej.2025.169404"}, {"id": 47, "date": "2025-10-30", "year": 2025, "title": "Engineering multifunctionality in gallium oxide: unveiling novel structural, electronic, and opto-mechanical attributes of gadolinium-doped β-Ga2O3 through advanced first-principles design", "venue": "RSC Advances", "jif": 6.1, "q": "Q2", "cites": 4, "role": "corresponding", "pos": [2, 2], "doi": "https://doi.org/10.1039/d5ra05763a"}, {"id": 46, "date": "2025-09-09", "year": 2025, "title": "Rational material design of chemically inert oxide anode coating layers for lithium metal and all-solid-state batteries", "venue": "Applied Surface Science Advances", "jif": 10.0, "q": "Q1", "cites": 0, "role": "co-author", "pos": [6, 10], "doi": "https://doi.org/10.1016/j.apsadv.2025.100842"}, {"id": 45, "date": "2025-06-30", "year": 2025, "title": "초저궤도 우주환경에서 자기 강화 원자산소 저항 산화층이 형성된 산화물/산화물 세라믹 복합재 구조의 손상 거동 평가", "venue": "복합재료 (Composites Research), 한국복합재료학회", "jif": null, "q": null, "cites": 0, "role": "co-author", "pos": [6, 8], "doi": "https://doi.org/10.7234/composres.2025.38.3.333"}, {"id": 44, "date": "2025-04-30", "year": 2025, "title": "First-principles investigation of Mo-doped β-Ga2O3: Prospects for visible light technologies and spintronics", "venue": "Physica B: Condensed Matter", "jif": 3.2, "q": "Q2", "cites": 8, "role": "corresponding", "pos": [5, 5], "doi": "https://doi.org/10.1016/j.physb.2025.417334"}, {"id": 43, "date": "2025-01-27", "year": 2025, "title": "Accentuating the ambient curing behavior of geopolymers: metamodel-guided optimization for fast-curing geopolymers with high flexural strength", "venue": "Digital Discovery", "jif": 7.1, "q": "Q1", "cites": 4, "role": "corresponding", "pos": [5, 6], "doi": "https://doi.org/10.1039/d4dd00217b"}, {"id": 42, "date": "2025-01-14", "year": 2025, "title": "First-Principle Insights into Positive Triboelectrification of Polyoxymethylene Through Homolytic Bond Rupture", "venue": "Nanoenergy Advances", "jif": 4.2, "q": "Q3", "cites": 2, "role": "co-author", "pos": [2, 3], "doi": "https://doi.org/10.3390/nanoenergyadv5010001"}, {"id": 41, "date": "2024-12-18", "year": 2024, "title": "Ultrahigh-gain colloidal quantum dot infrared avalanche photodetectors", "venue": "Nature Nanotechnology", "jif": 37.5, "q": "Q1", "cites": 47, "role": "co-author", "pos": [3, 9], "doi": "https://doi.org/10.1038/s41565-024-01831-x"}, {"id": 40, "date": "2024-12-04", "year": 2024, "title": "Unveiling the Aluminum Doping Effects of In-Situ Transmogrified Dual-LDH Heterostructure and Its Fermi-Level Alignment to Water Splitting Potentials", "venue": "Advanced Energy Materials", "jif": 25.5, "q": "Q1", "cites": 39, "role": "co-author", "pos": [10, 11], "doi": "https://doi.org/10.1002/aenm.202403889"}, {"id": 39, "date": "2024-10-17", "year": 2024, "title": "Machine learning-enhanced design of lead-free halide perovskite materials using density functional theory", "venue": "Current Applied Physics", "jif": 2.8, "q": "Q3", "cites": 7, "role": "co-corresponding", "pos": null, "doi": "https://doi.org/10.1016/j.cap.2024.10.012"}, {"id": 38, "date": "2024-09-30", "year": 2024, "title": "Suppressing Hole Accumulation Through Sub-Nanometer Dipole Interfaces in Hybrid Perovskite/Organic Solar Cells for Boosting Near-Infrared Photon Harvesting", "venue": "Advanced Materials", "jif": 29.1, "q": "Q1", "cites": 22, "role": "co-author", "pos": [9, 13], "doi": "https://doi.org/10.1002/adma.202411015"}, {"id": 37, "date": "2024-08-29", "year": 2024, "title": "Overcoming the limitations of atomic-scale simulations on semiconductor catalysis with changing Fermi level and surface treatment", "venue": "Journal of Materials Chemistry A", "jif": 9.2, "q": "Q1", "cites": 4, "role": "co-author", "pos": [12, 14], "doi": "https://doi.org/10.1039/d4ta03595j"}, {"id": 36, "date": "2024-07-29", "year": 2024, "title": "Multifaceted investigation into the impact of Ga substitution for Al in V2MnAl inverse Heusler alloys", "venue": "Physica B: Condensed Matter", "jif": 3.2, "q": "Q2", "cites": 3, "role": "co-author", "pos": [4, 5], "doi": "https://doi.org/10.1016/j.physb.2024.416345"}, {"id": 35, "date": "2024-04-29", "year": 2024, "title": "Unravelling performance of honeycomb structures as drug delivery systems for the isoniazid drug using DFT-D3 correction dispersion and molecular dynamic simulations", "venue": "Physical Chemistry Chemical Physics", "jif": 3.0, "q": "Q3", "cites": 50, "role": "co-author", "pos": [2, 8], "doi": "https://doi.org/10.1039/d3cp05457h"}, {"id": 34, "date": "2024-04-16", "year": 2024, "title": "Morphological diversity in directionally-solidified microstructures with varying anisotropy of solid-liquid interfacial free energy", "venue": "Journal of Materials Research and Technology", "jif": 7.3, "q": "Q1", "cites": 6, "role": "co-author", "pos": [4, 5], "doi": "https://doi.org/10.1016/j.jmrt.2024.04.126"}, {"id": 33, "date": "2024-01-11", "year": 2024, "title": "Designing Pr-based advanced photoluminescent materials using machine learning and density functional theory", "venue": "Journal of Materials Science", "jif": 4.4, "q": "Q2", "cites": 5, "role": "corresponding", "pos": [5, 5], "doi": "https://doi.org/10.1007/s10853-023-09232-6"}, {"id": 32, "date": "2024-01-09", "year": 2024, "title": "Sequential doping strategy in rutile TiO2 nanorod for high performance photoanode", "venue": "Applied Surface Science", "jif": 6.6, "q": "Q1", "cites": 6, "role": "co-author", "pos": [10, 11], "doi": "https://doi.org/10.1016/j.apsusc.2023.159213"}, {"id": 31, "date": "2023-12-01", "year": 2023, "title": "Radar absorption characteristics of ceramic oxide fiber/aluminosilicate-sendust composite structure at ultrahigh temperatures", "venue": "Journal of Alloys and Compounds", "jif": 6.7, "q": "Q1", "cites": 24, "role": "co-author", "pos": [3, 7], "doi": "https://doi.org/10.1016/j.jallcom.2023.171979"}, {"id": 30, "date": "2023-11-24", "year": 2023, "title": "Explainable AI for Material Property Prediction Based on Energy Cloud: A Shapley-Driven Approach", "venue": "Materials", "jif": 3.7, "q": "Q2", "cites": 28, "role": "co-author", "pos": [4, 5], "doi": "https://doi.org/10.3390/ma16237322"}, {"id": 29, "date": "2023-10-20", "year": 2023, "title": "Uncertainty and Irreproducibility of Triboelectricity Based on Interface Mechanochemistry", "venue": "Physical Review Letters", "jif": 9.4, "q": "Q1", "cites": 21, "role": "co-author", "pos": [9, 11], "doi": "https://doi.org/10.1103/physrevlett.131.166201"}, {"id": 28, "date": "2023-09-25", "year": 2023, "title": "A versatile strategy for hybridizing small experimental and large simulation data: A case for ceramic tape-casting process", "venue": "Materials & Design", "jif": 8.2, "q": "Q1", "cites": 6, "role": "co-author", "pos": [2, 8], "doi": "https://doi.org/10.1016/j.matdes.2023.112357"}, {"id": 27, "date": "2023-09-08", "year": 2023, "title": "Rational Design Strategy for Triboelectric Nanogenerators Based on Electron Back Flow and Ionic Defects: The Case of Polytetrafluoroethylene", "venue": "Advanced Electronic Materials", "jif": 5.9, "q": "Q1", "cites": 15, "role": "co-corresponding", "pos": [3, 11], "doi": "https://doi.org/10.1002/aelm.202300333"}, {"id": 26, "date": "2023-09-01", "year": 2023, "title": "Isovalent multi-component doping strategy for stabilizing cubic-Li7La3Zr2O12 with excellent Li mobility", "venue": "Chemical Engineering Journal", "jif": 12.5, "q": "Q1", "cites": 21, "role": "co-author", "pos": [4, 9], "doi": "https://doi.org/10.1016/j.cej.2023.144552"}, {"id": 25, "date": "2023-08-22", "year": 2023, "title": "Understanding the Electrokinetic Role of Ions on Electricity Generation in Droplet-Based Hydrovoltaic Systems", "venue": "Journal of Physical Chemistry C", "jif": 3.4, "q": "Q3", "cites": 15, "role": "co-author", "pos": [2, 4], "doi": "https://doi.org/10.1021/acs.jpcc.3c03183"}, {"id": 24, "date": "2023-08-05", "year": 2023, "title": "Dispersion control via crystal-phase modulation of yttrium-doped ZrO2 nanoparticle sol", "venue": "Colloids and Surfaces A: Physicochemical and Engineering Aspects", "jif": 5.4, "q": "Q2", "cites": 10, "role": "co-author", "pos": [2, 5], "doi": "https://doi.org/10.1016/j.colsurfa.2023.131476"}, {"id": 23, "date": "2023-08-02", "year": 2023, "title": "High-Throughput Screening on Halide Perovskite Derivatives and Rational Design of Cs3LuCl6", "venue": "ACS Energy Letters", "jif": 17.5, "q": "Q1", "cites": 27, "role": "co-author", "pos": [3, 10], "doi": "https://doi.org/10.1021/acsenergylett.3c01207"}, {"id": 22, "date": "2023-05-01", "year": 2023, "title": "Fabrication of thin and lightweight cobalt-coated quartz fiber/aluminosilicate composites for high-temperature microwave absorption", "venue": "Ceramics International", "jif": 6.0, "q": "Q1", "cites": 27, "role": "co-author", "pos": [3, 7], "doi": "https://doi.org/10.1016/j.ceramint.2022.12.235"}, {"id": 21, "date": "2023-04-01", "year": 2023, "title": "Modulation of Molybdenum oxidation state via Catalytic-oxidation", "venue": "Applied Surface Science", "jif": 6.6, "q": "Q1", "cites": 14, "role": "co-author", "pos": [3, 8], "doi": "https://doi.org/10.1016/j.apsusc.2023.156330"}, {"id": 20, "date": "2022-12-23", "year": 2022, "title": "Why does water in porous carbon generate electricity? Electrokinetic role of protons in a water droplet-induced hydrovoltaic system of hydrophilic porous carbon", "venue": "Journal of Materials Chemistry A", "jif": 9.2, "q": "Q1", "cites": 33, "role": "first", "pos": [1, 8], "doi": "https://doi.org/10.1039/d2ta05281d"}]</script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
