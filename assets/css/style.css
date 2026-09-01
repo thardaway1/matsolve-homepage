@@ -336,10 +336,12 @@ ul.plain b{color:var(--head);font-weight:500}
   font-family:"JetBrains Mono",monospace;font-size:.8rem;color:var(--accent);
   padding-top:4px;font-variant-numeric:tabular-nums;
 }
-.entry{display:grid;grid-template-columns:132px 1fr;gap:16px;padding:13px 0}
+.entry{display:grid;grid-template-columns:216px 1fr;gap:20px;padding:16px 0}
 .thumb{border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:var(--surface)}
 .thumb svg{display:block;width:100%;height:auto}
-.thumb img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center top;background:#fff}
+.thumb img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;
+  object-position:center top;background:#fff;cursor:zoom-in;transition:opacity .15s ease}
+.thumb img:hover{opacity:.86}
 .entry-title{font-size:.95rem;line-height:1.45;color:var(--head);font-weight:500}
 .entry-authors{font-size:.83rem;color:var(--muted);margin-top:3px}
 .entry-authors sup{font-size:.72em;color:var(--accent);padding-left:.5px}
@@ -373,6 +375,7 @@ footer.foot img{width:26px;height:26px;border-radius:6px;margin:0 auto 10px}
   .hero-mark{width:124px}
   .drivers,.cards,.gal,.ladder,.sw{grid-template-columns:1fr 1fr}
   .people{grid-template-columns:repeat(3,1fr)}
+  .entry{grid-template-columns:150px 1fr;gap:14px}
   .pi{grid-template-columns:1fr;gap:16px}
   h1.title{font-size:2rem}
   .nthumb{width:118px}

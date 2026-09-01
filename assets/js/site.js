@@ -161,6 +161,14 @@
   });
 
   document.getElementById('pubList').addEventListener('click', function(e){
+    var fig = e.target.closest('.thumb img');
+    if(fig){
+      var entry = fig.closest('.entry');
+      openEv({ title: entry.querySelector('.entry-title').textContent,
+               note: '', date: entry.querySelector('.entry-venue').textContent,
+               shots: [fig.getAttribute('src')] });
+      return;
+    }
     var b = e.target.closest('[data-toggle]');
     if(!b) return;
     var box = document.getElementById(b.getAttribute('data-toggle'));
@@ -209,8 +217,8 @@
     var one = ev.shots.length < 2;
     lbPrev.hidden = one; lbNext.hidden = one;
   }
-  function open(i){
-    ev = EV[i]; at = 0; lastFocus = document.activeElement;
+  function openEv(o){
+    ev = o; at = 0; lastFocus = document.activeElement;
     draw(); lb.hidden = false; document.body.style.overflow = 'hidden';
     document.getElementById('lbClose').focus();
   }
@@ -221,11 +229,11 @@
   function step(d){ at = (at + d + ev.shots.length) % ev.shots.length; draw(); }
 
   gal.addEventListener('click', function(e){
-    var f = e.target.closest('figure[data-ev]'); if(f) open(+f.getAttribute('data-ev'));
+    var f = e.target.closest('figure[data-ev]'); if(f) openEv(EV[+f.getAttribute('data-ev')]);
   });
   gal.addEventListener('keydown', function(e){
     if(e.key !== 'Enter' && e.key !== ' ') return;
-    var f = e.target.closest('figure[data-ev]'); if(f){ e.preventDefault(); open(+f.getAttribute('data-ev')); }
+    var f = e.target.closest('figure[data-ev]'); if(f){ e.preventDefault(); openEv(EV[+f.getAttribute('data-ev')]); }
   });
   lbPrev.addEventListener('click', function(e){ e.stopPropagation(); step(-1); });
   lbNext.addEventListener('click', function(e){ e.stopPropagation(); step(1); });
