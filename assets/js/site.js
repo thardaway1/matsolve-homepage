@@ -10,15 +10,15 @@
      논문 게재는 기본적으로 news에 올리지 않는다 — 전체 목록은 publications 탭에 있다.
      예외는 표지(front cover) 선정처럼 그 자체로 뉴스가 되는 건뿐. (2026-09-01 결정) */
   var NEWS = [
-    {d:'2026-09-30', t:'Organising the <b>9th Asian Materials Data Symposium</b> (AMDS 2026)', s:'COEX, Seoul · 30 Sep – 2 Oct'},
+    {d:'2026-09-30', u:'https://www.amds2026.org/', t:'Organising the <b>9th Asian Materials Data Symposium</b> (AMDS 2026)', s:'COEX, Seoul · 30 Sep – 2 Oct'},
     {d:'2026-07-01', label:'2026.07', ko:true, img:'n_grad',
      t:'졸업생 송혜정, NUS MSE 박사과정 진학 및 대한민국 정부 국비유학생 선정'},
-    {d:'2026-06-16', img:'n_cover', t:'<i>Nanoscale Advances</i> front-cover selection — MXene vacancy chemistry'},
+    {d:'2026-06-16', u:'https://doi.org/10.1039/d5na00962f', img:'n_cover', t:'<i>Nanoscale Advances</i> front-cover selection — MXene vacancy chemistry'},
     {d:'2026-03-30', ko:true, img:'n_plat', t:'가상공학 플랫폼 구축 사업 성과 보도'},
     {d:'2026-02-09', ko:true, t:'작가와 협업, 해양부산물이 예술로 재탄생', s:'한국세라믹기술원 보도자료'},
     {d:'2025-10-17', ko:true, img:'n_award', t:'한국세라믹학회 추계학술대회 우수포스터상 수상'},
-    {d:'2025-03-26', ko:true, img:'n_geo', t:"'AI가 설계한 시멘트 대체재' 친환경 지오폴리머 개발"},
-    {d:'2025-02-27', ko:true, img:'n_qd', t:'초고감도 양자점 적외선 센서 신기술 개발'},
+    {d:'2025-03-26', u:'https://www.electimes.com/news/articleView.html?idxno=352452', ko:true, img:'n_geo', t:"'AI가 설계한 시멘트 대체재' 친환경 지오폴리머 개발"},
+    {d:'2025-02-27', u:'http://cerazine.net/m/view.php?idx=31579', ko:true, img:'n_qd', t:'초고감도 양자점 적외선 센서 신기술 개발'},
     {d:'2024-04-29', ko:true, t:'미코파워와 AI 기반 SOFC 품질검수 기술 개발', s:'산업 협력 성과'},
     {d:'2023-08-30', ko:true, t:'양자역학 시뮬레이션·AI를 활용한 신소재 탐색·설계 기술 개발', s:'아주대 공동 연구'},
     {d:'2021-08-31', ko:true, t:'세라믹 마찰전기의 원리와 크기 결정 요소 규명', s:'Physical Review Letters 후속 보도'}
@@ -28,10 +28,12 @@
   document.getElementById('newsList').innerHTML = NEWS.map(function(item){
     var thumb = item.img && IMG[item.img]
       ? '<img class="nthumb" src="'+IMG[item.img]+'" alt="">' : '';
+    var title = item.u
+      ? '<a href="'+item.u+'" target="_blank" rel="noopener">'+item.t+'</a>' : item.t;
     return '<div class="row">'
       + '<div class="d">'+(item.label || item.d.replace(/-/g,'.'))+'</div>'
       + '<div class="t'+(item.ko ? ' ko' : '')+'"'+(item.ko ? ' lang="ko"' : '')+'>'
-      +   '<div class="ntxt">'+item.t+(item.s ? '<small>'+item.s+'</small>' : '')+'</div>'
+      +   '<div class="ntxt">'+title+(item.s ? '<small>'+item.s+'</small>' : '')+'</div>'
       +   thumb
       + '</div></div>';
   }).join('');
