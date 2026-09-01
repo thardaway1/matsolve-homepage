@@ -71,7 +71,7 @@
   var n = PUBS.length;
   var q1 = PUBS.filter(function(p){return p.q==='Q1';}).length;
   var lead = PUBS.filter(function(p){return p.role!=='co-author';}).length;
-  var cites = PUBS.reduce(function(s,p){return s+p.cites;},0);
+  var cites = PUBS.reduce(function(s,p){return s+(p.cites||0);},0);
   var ifs = PUBS.map(function(p){return p.jif;}).filter(Boolean);
   var avgIF = (ifs.reduce(function(s,v){return s+v;},0)/ifs.length).toFixed(1);
   var maxIF = Math.max.apply(null, ifs);
@@ -109,9 +109,9 @@
     pills += '<span class="pill flat">'+ROLE[p.role]+'</span>';
     if(p.q) pills += '<span class="pill flat">'+p.q+'</span>';
 
-    var det = '<b>Journal impact factor</b> ' + (p.jif ? p.jif : 'not yet indexed')
-      + ' · <b>Quartile</b> ' + (p.q || 'n/a')
-      + ' · <b>Citations</b> ' + p.cites
+    var det = '<b>Journal impact factor</b> ' + (p.jif ? p.jif : 'not recorded')
+      + ' · <b>Quartile</b> ' + (p.q || 'not recorded')
+      + ' · <b>Citations</b> ' + (p.cites == null ? 'not recorded' : p.cites)
       + ' · <b>Authorship</b> ' + (p.pos ? p.pos[0]+' of '+p.pos[1]+' authors, ' : '') + ROLE[p.role]
       + ' · <b>Published</b> ' + p.date;
 
