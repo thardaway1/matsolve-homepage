@@ -84,12 +84,16 @@ nav{
 .brand{display:flex;align-items:center;gap:10px;border:0}
 .brand img{width:30px;height:30px;border-radius:7px}
 .brand b{font-family:"Roboto Slab",Georgia,serif;font-size:1.05rem;letter-spacing:-.01em;color:var(--head);font-weight:700}
-.nav-links{margin-left:auto;display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+.nav-links{margin-left:auto;display:flex;align-items:center;gap:2px;flex-wrap:wrap;justify-content:flex-end}
 .nav-links button{
   font:inherit;font-size:.9rem;background:none;border:0;color:var(--muted);
   padding:5px 9px;border-radius:5px;cursor:pointer;letter-spacing:.005em;
 }
 .nav-links button:hover{color:var(--head);background:var(--surface)}
+@media (max-width:600px){
+  .nav-in{flex-wrap:wrap;row-gap:2px}
+  .nav-links{margin-left:0;flex-basis:100%;justify-content:flex-start}
+}
 .nav-links button[aria-current="page"]{color:var(--accent);font-weight:500;background:var(--accent-wash)}
 #modeBtn{width:31px;height:31px;padding:0;display:grid;place-items:center;font-size:.95rem;border:1px solid var(--rule);margin-left:6px}
 
@@ -336,7 +340,7 @@ ul.plain b{color:var(--head);font-weight:500}
   font-family:"JetBrains Mono",monospace;font-size:.8rem;color:var(--accent);
   padding-top:4px;font-variant-numeric:tabular-nums;
 }
-.entry{display:grid;grid-template-columns:216px 1fr;gap:20px;padding:16px 0}
+.entry{display:grid;grid-template-columns:216px 1fr;gap:20px;padding:16px 0;align-items:start}
 .thumb{border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:var(--surface)}
 .thumb svg{display:block;width:100%;height:auto}
 .thumb img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;

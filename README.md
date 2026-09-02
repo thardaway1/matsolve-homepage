@@ -1,7 +1,7 @@
 # MatSOLVE — lab homepage
 
 Static site for **MatSOLVE** (Material Simulation and Optimization Lab with Virtual
-Engineering), Center for Virtual Engineering Platform, Korea Institute of Ceramic
+Engineering), Division of AI Convergence Research, Korea Institute of Ceramic
 Engineering and Technology (KICET). PI: Hyunseok Ko.
 
 No build step, no dependencies — plain HTML/CSS/JS. Any static host works
@@ -58,9 +58,6 @@ Brand colour: `#66E6E3` (MatSOLVE symbol), `#077F7A` for light-mode text.
 Content that still needs the lab's input — the draft carried these as on-page notes;
 they were removed before publishing, so they live here instead.
 
-- **Profile links** — Google Scholar, ORCID, GitHub, KICET profile and the CV file.
-  The markup is in place but `hidden`: fill the `href` and drop the `hidden`
-  attribute on the `data-ext` links in `index.html`.
 - **Lab phone number and postal address** — the contact block has email and QR only.
 - **Member names and titles** — English spellings and ranks (researcher /
   student researcher / postdoc) were inferred from the photo filenames.
