@@ -15,8 +15,8 @@
      t:'졸업생 송혜정, 국비유학생으로 뽑혀 싱가포르국립대(NUS) 박사과정으로'},
     {d:'2026-06-16', u:'https://doi.org/10.1039/d5na00962f', img:'n_cover', t:'Cover story — MXene vacancy chemistry makes the front of <i>Nanoscale Advances</i>'},
     {d:'2026-03-30', u:'https://www.etnews.com/20260330000172', ko:true, img:'n_plat', t:'가상공학 플랫폼 구축 사업, 성과로 언론의 주목을 받다'},
-    {d:'2026-02-09', u:'https://www.hankyung.com/article/202602093067h', ko:true, t:'바다가 남긴 부산물, 작가의 손끝에서 예술로 다시 태어나다', s:'한국세라믹기술원 보도자료'},
-    {d:'2025-10-17', ko:true, img:'n_award', t:'한국세라믹학회 추계학술대회서 우수포스터상을 받다'},
+    {d:'2026-02-09', u:'https://www.hankyung.com/article/202602093067h', img:'n_marine', ko:true, t:'바다가 남긴 부산물, 작가의 손끝에서 예술로 다시 태어나다', s:'한국세라믹기술원 보도자료'},
+    {d:'2025-10-17', ko:true, img:'n_award', t:'서민택 박사과정, 한국세라믹학회 우수포스터상'},
     {d:'2025-03-26', u:'https://www.electimes.com/news/articleView.html?idxno=352452', ko:true, img:'n_geo', t:"'AI가 설계한 시멘트 대체재' — 친환경 지오폴리머 개발"},
     {d:'2025-02-27', u:'http://cerazine.net/m/view.php?idx=31579', ko:true, img:'n_qd', t:'어둠 속에서도 보인다 — 초고감도 양자점 적외선 센서 신기술 개발'},
     {d:'2024-04-29', u:'https://www.kharn.kr/news/article.html?no=24882', ko:true, t:'미코파워와 손잡고 AI 기반 SOFC 품질검수 기술을 개발하다', s:'산업 협력 성과'},
@@ -93,11 +93,11 @@
   var rspan = Math.min.apply(null,ryears)+'–'+Math.max.apply(null,ryears);
 
   document.getElementById('glance').innerHTML = [
-    [rn,'journal papers, '+rspan],
-    [rq1,'in Q1 journals'],
-    [rlead,'as first or corresponding author'],
-    [rcites,'citations'],
-    [ravgIF,'mean impact factor'],
+    [rn,'journal papers, recent 5 years ('+rspan+')'],
+    [rq1,'in Q1 journals, recent 5 years'],
+    [rlead,'as first or corresponding author, recent 5 years'],
+    [rcites,'citations, recent 5 years'],
+    [ravgIF,'mean impact factor, recent 5 years'],
     ['13 · 10','collaborating institutions, domestic · international']
   ].map(function(c){
     return '<div class="card"><div class="v">'+c[0]+'</div><div class="l">'+c[1]+'</div></div>';
