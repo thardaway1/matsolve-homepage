@@ -20,7 +20,7 @@
     {d:'2025-03-26', u:'https://www.electimes.com/news/articleView.html?idxno=352452', ko:true, img:'n_geo', t:"'AI가 설계한 시멘트 대체재' — 친환경 지오폴리머 개발"},
     {d:'2025-02-27', u:'http://cerazine.net/m/view.php?idx=31579', ko:true, img:'n_qd', t:'세라믹기술원 등, 초고감도 양자점 적외선 센서 신기술 개발'},
     {d:'2024-04-29', u:'https://www.kharn.kr/news/article.html?no=24882', img:'n_mico', ko:true, t:'미코파워와 손잡고 AI 기반 SOFC 품질검수 기술을 개발하다', s:'산업 협력 성과'},
-    {d:'2023-08-30', u:'https://www.hankyung.com/article/202308300783Y', img:'n_halide', ko:true, t:'양자역학 시뮬레이션과 AI로 새로운 신소재를 찾아내다', s:'아주대 공동 연구'},
+    {d:'2023-08-30', u:'https://www.fnnews.com/news/202308301016475717', img:'n_halide', ko:true, t:'양자역학 시뮬레이션과 AI로 새로운 신소재를 찾아내다', s:'아주대-한양대-KICET 공동연구'},
     {d:'2023-01-30', u:'https://www.newsis.com/view/NISX20230130_0002173760', ko:true, img:'n_hydro', t:'폐의류 탄소섬유에 물 한 방울, 전기가 흐르는 원리를 규명하다', s:'아주대 공동 연구 · Journal of Materials Chemistry A 표지논문'},
     {d:'2021-08-31', u:'https://doi.org/10.1021/acsenergylett.1c01019', img:'n_tribo', ko:true, t:'수천 년 묵은 질문에 답하다 — 세라믹 마찰전기의 원리와 크기 결정 요소 규명', s:'ACS Energy Letters 게재'}
   ];
