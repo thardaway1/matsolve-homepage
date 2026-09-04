@@ -18,7 +18,7 @@
     {d:'2026-02-09', u:'https://www.hankyung.com/article/202602093067h', img:'n_marine', ko:true, t:'바다가 남긴 부산물, 작가의 손끝에서 예술로 다시 태어나다', s:'한국세라믹기술원 보도자료'},
     {d:'2025-10-17', ko:true, img:'n_award', t:'서민택 박사과정, 한국세라믹학회 우수포스터상'},
     {d:'2025-03-26', u:'https://www.electimes.com/news/articleView.html?idxno=352452', ko:true, img:'n_geo', t:"'AI가 설계한 시멘트 대체재' — 친환경 지오폴리머 개발"},
-    {d:'2025-02-27', u:'http://cerazine.net/m/view.php?idx=31579', ko:true, img:'n_qd', t:'어둠 속에서도 보인다 — 초고감도 양자점 적외선 센서 신기술 개발'},
+    {d:'2025-02-27', u:'http://cerazine.net/m/view.php?idx=31579', ko:true, img:'n_qd', t:'세라믹기술원 등, 초고감도 양자점 적외선 센서 신기술 개발'},
     {d:'2024-04-29', u:'https://www.kharn.kr/news/article.html?no=24882', img:'n_mico', ko:true, t:'미코파워와 손잡고 AI 기반 SOFC 품질검수 기술을 개발하다', s:'산업 협력 성과'},
     {d:'2023-08-30', u:'https://www.hankyung.com/article/202308300783Y', img:'n_halide', ko:true, t:'양자역학 시뮬레이션과 AI로 새로운 신소재를 찾아내다', s:'아주대 공동 연구'},
     {d:'2023-01-30', u:'https://www.newsis.com/view/NISX20230130_0002173760', ko:true, img:'n_hydro', t:'폐의류 탄소섬유에 물 한 방울, 전기가 흐르는 원리를 규명하다', s:'아주대 공동 연구 · Journal of Materials Chemistry A 표지논문'},
