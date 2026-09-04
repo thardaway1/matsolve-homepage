@@ -16,6 +16,10 @@
   --navy:#0f2a4a;
   --nav-bg:rgba(255,255,255,.88);
   --shadow:0 1px 2px rgba(10,40,40,.05),0 8px 24px rgba(10,40,40,.055);
+  /* page backdrop: the photo shows through this scrim, lighter at the top */
+  --scrim-top:rgba(255,255,255,.80);
+  --scrim-mid:rgba(255,255,255,.93);
+  --scrim-far:rgba(255,255,255,.97);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
@@ -35,6 +39,9 @@
     --navy:#0b1e36;
     --nav-bg:rgba(14,20,22,.88);
     --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+    --scrim-top:rgba(9,16,18,.62);
+    --scrim-mid:rgba(9,16,18,.88);
+    --scrim-far:rgba(9,16,18,.96);
   }
 }
 :root[data-theme="dark"]{
@@ -54,10 +61,21 @@
   --navy:#0b1e36;
   --nav-bg:rgba(14,20,22,.88);
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+  --scrim-top:rgba(9,16,18,.62);
+  --scrim-mid:rgba(9,16,18,.88);
+  --scrim-far:rgba(9,16,18,.96);
 }
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+/* Page backdrop — the photo stays put while the content scrolls over it,
+   read through a scrim that clears at the top and closes in further down. */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    linear-gradient(180deg,var(--scrim-top) 0%,var(--scrim-mid) 42%,var(--scrim-far) 100%),
+    url("../img/hero.jpg") center top/cover no-repeat;
+}
 body{
   margin:0;background:var(--bg);color:var(--ink);
   font-family:Roboto,"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
@@ -138,36 +156,10 @@ p{margin:0 0 1em}
 figure{margin:0}
 figcaption{font-size:.82rem;color:var(--muted);margin-top:9px;line-height:1.5}
 
-/* ---------- about hero ----------
-   The hero sits on a photographic panel, so its text is light in BOTH themes —
-   the scrim below is what guarantees contrast, not the theme tokens. */
-.hero{
-  position:relative;isolation:isolate;
-  display:grid;grid-template-columns:1fr 168px;gap:34px;align-items:start;
-  padding:38px 30px 34px;border-radius:14px;overflow:hidden;
-  box-shadow:var(--shadow);
-}
-.hero::before{
-  content:"";position:absolute;inset:0;z-index:-2;
-  background:#0b1417 url("../img/hero.jpg") center/cover no-repeat;
-}
-.hero::after{
-  content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(100deg,rgba(7,15,17,.93) 0%,rgba(7,15,17,.82) 46%,rgba(7,15,17,.44) 100%);
-}
-.hero .eyebrow{color:var(--brand)}
-.hero .title{color:#ffffff}
-.hero .tagline{color:#f1f8f8}
-.hero .tagline em{color:var(--brand)}
-.hero .lede{color:#c4d7da}
-.hero .affil{color:#b0c5c9}
-.hero .affil b{color:#ffffff}
-.hero .social a{
-  color:#dfeaec;background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.22);
-}
-.hero .social a:hover{color:var(--brand);border-color:var(--brand);background:rgba(102,230,227,.14)}
+/* ---------- about hero ---------- */
+.hero{display:grid;grid-template-columns:1fr 168px;gap:34px;align-items:start}
 .hero-mark{
-  width:168px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.45);
+  width:168px;border-radius:20px;box-shadow:var(--shadow);
 }
 .tagline{
   font-family:"Roboto Slab",Georgia,serif;font-size:1.12rem;line-height:1.45;
@@ -401,8 +393,7 @@ footer.foot{
 footer.foot img{width:26px;height:26px;border-radius:6px;margin:0 auto 10px}
 
 @media (max-width:760px){
-  .hero{grid-template-columns:1fr;gap:22px;padding:26px 20px 24px}
-  .hero::after{background:linear-gradient(175deg,rgba(7,15,17,.9) 0%,rgba(7,15,17,.78) 55%,rgba(7,15,17,.62) 100%)}
+  .hero{grid-template-columns:1fr;gap:22px}
   .hero-mark{width:124px}
   .drivers,.cards,.gal,.ladder,.sw{grid-template-columns:1fr 1fr}
   .people{grid-template-columns:repeat(3,1fr)}
