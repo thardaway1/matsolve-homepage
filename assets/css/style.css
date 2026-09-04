@@ -69,12 +69,14 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 /* Page backdrop — the photo stays put while the content scrolls over it,
-   read through a scrim that clears at the top and closes in further down. */
+   read through a scrim that clears at the top and closes in further down.
+   Swap the filename to change the backdrop: hero-cluster.jpg (molecular
+   cluster) or hero-facade.jpg (navy structural grid). */
 body::before{
   content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
   background:
     linear-gradient(180deg,var(--scrim-top) 0%,var(--scrim-mid) 30%,var(--scrim-far) 100%),
-    url("../img/hero.jpg") center center/cover no-repeat;
+    url("../img/hero-cluster.jpg") center center/cover no-repeat;
 }
 body{
   margin:0;background:var(--bg);color:var(--ink);
